@@ -15,6 +15,7 @@
     --ot-input: #02799D;
     --bd-input: rgba(73, 80, 87, 0.3);
     --tt-placeholder: rgba(73, 80, 87, 0.5);
+    --bg-input: #DCE2E9;
     
     --tt-button: white;
     --bg-button: #02799D;
@@ -59,9 +60,18 @@ form label {
     font-size: 1.4rem;
     line-height: 1.8rem;
     color: var(--tt-label);
-
+    margin-bottom: .8rem;
+    display: block;
 }
 
 form input {
     width: 100%;
+    border: 1px solid var(--bd-input);
+    background: var(--bg-input);
+    padding: 1.6rem;
+    border-radius: .4rem;
+}
+
+.input-wrapper + .input-wrapper { //este comando significa que é para fazer a aplicação de estilo no input-wrapper que tenha outro input wrapper na sequência... é como se estivesse lendo da direita para a esquerda.
+    margin-top: 1.6rem;
 }
