@@ -41,7 +41,7 @@ body, input, button {
     place-content: center;
 }
 
-.card {
+.card, .modal-card {
     padding: 4.8rem 6.4rem 6.4rem;
     background: white;
     max-width: 42.8rem;
@@ -95,7 +95,7 @@ form input::placeholder {
 
 /*este comando acima significa que é para fazer a aplicação de estilo no input-wrapper que tenha outro input wrapper na sequência... é como se estivesse lendo da direita para a esquerda. */
 
-button {
+form button {
     margin-top: 3.2rem;
     padding: 1.6rem;
     width: 100%;
@@ -116,7 +116,51 @@ button {
     transition: background .3s;
 }
 
-button:hover {
+form button:hover {
     background: var(--bg-button-hover)
 }
 
+/* modal */
+.modal-wrapper.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-wrapper {
+    position: absolute;
+    /* poderia usar o código abaixo para esticar o fundo escurecido, ou apenas usar o comando inset qeu faz exatamente a mesma coisa de forma mais curta
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    */
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+
+    display: grid;
+    place-content: center;
+    
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal { 
+    position: relative;
+}
+
+.modal button {
+    background: none;
+    border: none;
+
+    position: absolute;
+    top: 1.6rem;
+    right: 1.6rem;
+    
+    cursor: pointer;
+
+    transition: transform .3s;
+}
+
+.modal button:hover {
+    transform: scale(1.1);
+}
