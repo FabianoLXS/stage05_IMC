@@ -93,8 +93,6 @@ form input::placeholder {
     margin-top: 1.6rem;
 }
 
-/*este comando acima significa que é para fazer a aplicação de estilo no input-wrapper que tenha outro input wrapper na sequência... é como se estivesse lendo da direita para a esquerda. */
-
 form button {
     margin-top: 3.2rem;
     padding: 1.6rem;
@@ -127,16 +125,8 @@ form button:hover {
     visibility: visible;
 }
 
-
-
 .modal-wrapper {
     position: absolute;
-    /* poderia usar o código abaixo para esticar o fundo escurecido, ou apenas usar o comando inset qeu faz exatamente a mesma coisa de forma mais curta
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    */
     inset: 0;
     background: rgba(0, 0, 0, 0.7);
 
