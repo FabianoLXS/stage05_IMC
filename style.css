@@ -163,7 +163,7 @@ form button:hover {
     visibility: visible;
     opacity: 1;
     transform: translateY(0);
-}
+ }
 
 .alert-error {
     position: absolute;
